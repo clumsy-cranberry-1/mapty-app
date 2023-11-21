@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="shortcut icon" type="image/png" href="./src/img/icon.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Leaflet Interactive Map: https://leafletjs.com/ -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+    </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./src/css/style.css" />
+
+  <script defer src="./src/js/script.js"></script>
+
+  <title>Mapty // Map Your Workouts</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <img src="./src/img/logo-full.png" alt="Logo" class="logo" />
+  </header>
+  <main class="container">
+    <section id="map"></section>
+    <section class="sidebar">
+      <ul class="workouts">
+        <!-- FORM START -->
+        <form class="form hidden">
+          <div class="form__row">
+            <div class="form__col">
+              <label class="form__label">Type</label>
+              <select class="form__input form__input--type">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+            <div class="form__col">
+              <label class="form__label">Distance</label>
+              <input class="form__input form__input--distance" placeholder="km" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__col">
+              <label class="form__label">Duration</label>
+              <div class="form__input form__input--duration-container">
+                <input class="form__input--duration" type="text" min="0" minlength="2" maxlength="2" id="hours"
+                  placeholder="--">
+                <span>:</span>
+                <input class="form__input--duration" type="text" min="0" minlength="2" maxlength="2" id="minutes"
+                  placeholder="--">
+                <span>:</span>
+                <input class="form__input--duration" type="text" min="0" minlength="2" maxlength="2" id="seconds"
+                  placeholder="--">
+              </div>
+            </div>
+            <div class="form__col">
+              <label class="form__label">Elev Gain</label>
+              <input class="form__input form__input--elevation" placeholder="meters" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__col">
+              <button type="reset" class="form__btn form__btn--reset">Reset</button>
+              <button type="submit" class="form__btn form__btn--submit">OK</button>
+            </div>
+          </div>
+        </form>
+        <!-- END OF FORM -->
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
